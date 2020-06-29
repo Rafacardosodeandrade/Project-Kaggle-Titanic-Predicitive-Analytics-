@@ -19,7 +19,16 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 /kaggle/input/titanic/gender_submission.csv
 /kaggle/input/titanic/test.csv
 
-# 1st step
+
 # Load the data
 train_data = pd.read_csv("/kaggle/input/titanic/train.csv")
 train_data.head()
+
+test_data = pd.read_csv("/kaggle/input/titanic/test.csv")
+test_data.head()
+
+#explore a pattern
+women = train_data.loc[train_data.Sex == 'female']['Survived']
+rate_women = sum(women)/len(women)
+
+print("% of women who survived", rate_women)
