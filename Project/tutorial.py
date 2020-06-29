@@ -18,3 +18,8 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 /kaggle/input/titanic/train.csv
 /kaggle/input/titanic/gender_submission.csv
 /kaggle/input/titanic/test.csv
+
+# 1st step
+# Load the data
+train_data = pd.read_csv("/kaggle/input/titanic/train.csv")
+train_data.head()
