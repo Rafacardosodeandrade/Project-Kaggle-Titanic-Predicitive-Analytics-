@@ -51,3 +51,5 @@ output = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived':predicti
 output.to_csv('my_submission.csv', index=False)
 print("Your submission was successfully saved!")
 
+
+
